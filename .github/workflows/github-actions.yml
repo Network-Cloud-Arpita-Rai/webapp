@@ -8,11 +8,11 @@ on:
 jobs:
   build:
     name: integration-test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestss
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v237
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
@@ -27,7 +27,7 @@ jobs:
         echo "MYSQL_USER=arpita" >> .env
 
     - name: Set up MySQL
-      uses: ankane/setup-mariadb@v1
+      uses: ankane/setup-mariadb@v1345
       with:
         database: ${{vars.MYSQL_DATABASE}}
 
