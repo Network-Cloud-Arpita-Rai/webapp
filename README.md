@@ -47,7 +47,7 @@ DB_DATABASE=your_database_name
 
 Make sure to replace your_password and your_database_name with your MySQL password and database name.
 
-You can try to connect to the mySql database server from any client application.
+You can try to connect to the mySql database server from any client application
 
 ## Quick Start
 
