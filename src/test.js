@@ -46,7 +46,7 @@ describe('User API Endpoint Tests', () => {
     try {
       const response = await request.get(userSelfEndpoint)
         .set('Authorization', `Basic ${authCredentials}`)
-        .expect(200);
+        .expect(201);
 
       expect(response.body.username).to.equal(testUserEmail);
       expect(response.body).to.have.property('id');
@@ -75,7 +75,7 @@ describe('User API Endpoint Tests', () => {
 
     const getResponse = await request.get(userSelfEndpoint)
       .set('Authorization', `Basic ${authCredentialsForUpdate}`)
-      .expect(201);
+      .expect(200);
 
     expect(getResponse.body.username).to.equal(testUserEmail);
     expect(getResponse.body.first_name).to.equal('UpdatedDoe');
