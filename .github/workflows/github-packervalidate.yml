@@ -23,6 +23,9 @@ jobs:
     # - name: Set up Google Cloud credentials
     #   run: echo "${{ secrets.GCP_ACCOUNT_JSON }}" > account-gcp.json
 
+    - name: Making zip of the project
+      run: zip -r webapp.zip .
+
     - name: Packer init
       run: packer init .
 
