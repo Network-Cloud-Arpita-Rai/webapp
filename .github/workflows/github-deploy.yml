@@ -39,6 +39,7 @@ jobs:
       
     # - name: Install dependencies
     #   run: npm install
+
       
     - name: Making zip of the project
       run: zip -r webapp.zip .

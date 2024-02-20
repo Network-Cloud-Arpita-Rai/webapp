@@ -40,6 +40,7 @@ MYSQL_HOST=root
 MYSQL_PASSWORD=rootroot
 MYSQL_HOST=localhost" > .env
 
+
 echo "================================================================="
 echo "Installing application dependencies and setting it up"
 echo "================================================================="
