@@ -1,12 +1,12 @@
 packer {
-  required_plugins {
+  required_plugins 
     googlecompute = {
       source  = "github.com/hashicorp/googlecompute"
       version = ">= 1.1.4"
     }
   }
 }
-source "googlecompute" "centos-source-image" {
+source "googlecompute" "centos-source-image" 
   image_name   = "${var.image_name}-${formatdate("YY-MM-DD-hh-mm-ss", timestamp())}"
   project_id   = var.project_id
   source_image = var.source_image
@@ -16,7 +16,7 @@ source "googlecompute" "centos-source-image" {
   // credentials_file = var.account_file
 }
 
-build {
+build 
   sources = ["source.googlecompute.centos-source-image"]
 
   provisioner "file" {
