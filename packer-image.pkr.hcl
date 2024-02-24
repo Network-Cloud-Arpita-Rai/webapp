@@ -6,7 +6,7 @@ packer {
     }
   }
 }
-source "googlecompute" "centos-source-image" {
+source " googlecompute" "centos-source-image"  {
   image_name   = "${var.image_name}-${formatdate("YY-MM-DD-hh-mm-ss", timestamp())}"
   project_id   = var.project_id
   source_image = var.source_image
@@ -14,7 +14,7 @@ source "googlecompute" "centos-source-image" {
   region       = var.region
   zone         = var.zone
   // credentials_file = var.account_file
-
+}
 
 build {
   sources = ["source.googlecompute.centos-source-image"]
@@ -22,9 +22,9 @@ build {
   provisioner "file" {
     source      = "./webapp.zip"
     destination = "/tmp/webapp.zip"
-  
+  }
 
-  provisioner "file" {
+  provisioner "file"  {
     source      = "./webapp.service"
     destination = "/tmp/webapp.service"
   }
