@@ -92,10 +92,10 @@ sudo adduser csye6225 --shell /usr/sbin/nologin || { echo "Failed to add csye622
 sudo chown -R csye6225:csye6225 /opt/csye6225dir || { echo "Failed to change directory permissions. Exiting."; exit 1; }
 sudo chmod -R 744 /opt/csye6225dir || { echo "Failed to change directory permissions. Exiting."; exit 1; }
 
-echo "================================================================="
-echo "Changing ownership of /var/log/webapp to csye6225 user"
-echo "================================================================="
-sudo chown -R csye6225:csye6225 /var/log/webapp || { echo "Failed to change directory permissions. Exiting."; exit 1; }
+# echo "================================================================="
+# echo "Changing ownership of /var/log/webapp to csye6225 user"
+# echo "================================================================="
+# sudo chown -R csye6225:csye6225 /var/log/webapp || { echo "Failed to change directory permissions. Exiting."; exit 1; }
 
 echo "================================================================="
 echo "Changing permissions of /var/log/webapp directory"
